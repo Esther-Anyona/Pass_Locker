@@ -6,6 +6,9 @@ class TestUser(unittest.TestCase):
     """
     subclass to define test cases for the user class behaviors
     """
+    def tearDown(self):
+        User.userList = []
+        
     def setUp(self):
         self.new_user =User("Esther", "Anyona", "Star", "Es123" )
 
