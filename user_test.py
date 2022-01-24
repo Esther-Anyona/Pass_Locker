@@ -32,9 +32,14 @@ class TestUser(unittest.TestCase):
         test_user = User ("John", "Doe", "Jodo", "JD123")
         self.new_user.save_user()
         self.new_user.delete_user()
-        self.assertEqual(len(User.userList),1)
+        self.assertEqual(len(User.userList),0)
         
-
+    def test_find_user_by_name(self):
+        self.new_user.save_user()
+        test_user = User ("John", "Doe", "Jodo", "JD123")
+        test_user.save_user()
+        found_user =User.find_by_name("Jodo")
+        self.assertEqual(found_user.userName, test_user.userName)
 
 
 

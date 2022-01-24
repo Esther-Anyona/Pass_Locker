@@ -14,3 +14,10 @@ class User:
 
     def delete_user(self): #deletes a user object
         User.userList.remove(self)
+
+    @classmethod
+    def find_by_name(cls, name):
+
+        for User in cls.userList:
+            if User.userName == name:
+                return User
