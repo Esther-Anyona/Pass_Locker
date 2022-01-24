@@ -31,5 +31,4 @@ class User:
         for User in cls.userList:
             if User.userName == userName:
                 return True
-
         return False
