@@ -17,17 +17,25 @@ class User:
 
     @classmethod
     def find_by_name(cls, name):
-
+        """
+        Method for finding users from the user list
+        """
         for User in cls.userList:
             if User.userName == name:
                 return User
 
     @classmethod
     def display_user(cls):
+        """
+        A class method to display existing accounts
+        """
         return cls.userList
 
     @classmethod
     def user_exists(cls, userName):
+        """
+        Method for checking whether a certain account exists using username
+        """
         for User in cls.userList:
             if User.userName == userName:
                 return True

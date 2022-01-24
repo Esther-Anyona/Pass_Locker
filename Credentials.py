@@ -15,11 +15,11 @@ class Credentials:
     def delete_account(self):
         Credentials.credentialsList.remove(self)
 
-    # @classmethod
-    # def find_by_username(cls, username):
-    #     for Credentials in cls.credentialsList:
-    #         if Credentials.username == username:
-    #             return username
+    @classmethod
+    def find_by_username(cls, username):
+        for Credentials in cls.credentialsList:
+            if Credentials.username == username:
+                return Credentials
 
     @classmethod
     def display_account(cls):

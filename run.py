@@ -3,22 +3,40 @@ from User import User
 from Credentials import Credentials
 
 def create_useraccount(firstName, lastName, userName, password):
+    """
+    Function to create a new user account
+    """
     new_user = User(firstName, lastName, userName, password)
     return new_user
 
 def save_user(User):
+    """
+    Function to save the newly created user account
+    """
     User.save_user()
 
 def delete_user(User):
+    """
+    Function to delete existing user account
+    """
     User.delete_user
 
 def find_user(userName):
+    """
+    Function to find a user by username
+    """
     return User.find_by_name(userName)
 
 def display_user():
+    """
+    Function to display existing users
+    """
     return User.display_user()
 
 def isexist_user(userName):
+    """
+    Method to check whether a user exists
+    """
     return User.user_exists(userName)
 
 
