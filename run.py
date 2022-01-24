@@ -12,8 +12,8 @@ def save_user(User):
 def delete_user(User):
     User.delete_user
 
-def find_user(name):
-    return User.find_by_name()
+def find_user(userName):
+    return User.find_by_name(userName)
 
 def display_user():
     return User.display_user()
@@ -43,11 +43,12 @@ def isexist_account(account):
 def main():
     while True:
         print("Hey, Welcome to Password Locker!")
+        print("**"*10)
         print("Use: 1 - to sign up as a new user, 2 - to login, 3 - to find a user, 4 - to exit")
 
         code = int(input())
-        if code == 1:
-            print("Create Account")
+        if code == 1: #sign-up
+            print("Create User Account")
             print("*"*10)
 
             print("Enter your First Name")
@@ -61,26 +62,71 @@ def main():
 
             print("Enter your password")
             password = input()
-            print("*"*10)
-
+            print("\n")
             save_user(create_useraccount(firstName, lastName, userName, password))
-
             print("Your user account has been successfully created!")
-            print("*"*10)
+            print("\n")
+            while True:
+                print(f"Welcome {userName}, use the following code options to proceed")
+                print ("**"*10)
+                print("1 - save new passcode, 2 - Delete passcode, 3 - Display saved passcodes, 4 - log out ")
+
+                option = int(input())
+                if option ==1:
+                    print("New Credentials")
+                    print("*"*10)
+
+                    print("Account Name")
+                    account = input()
+
+                    print("username")
+                    username = input()
+
+                    print("password")
+                    passcode = input()
+                    print("\n")
+
+                    save_account(create_accountcredentials(account, username, passcode))
+
+                elif option ==2:
+                    print("Enter the name of account to delete")
+                    print("*"*10)
+
+                    account = input()
+                    if isexist_account(account):
+                        remove_account(account)
+                        delete_account(remove_account)
+
+                    else:
+                        print(f"{account} account cannot be found")
+
+                elif option ==3:
+                    if display_account():
+                        for account in display_account():
+                            print(f"{account.account}:{account.passcode}")
+                    else:
+                        print("No passcode saved for this account")
+
+                elif option ==4:
+                    break
+
+        if code == 2: #user login
+            print("Enter username")
+            userName = input()
+
+            print("Enter your password")
+            password = input()
+
+            User.userName = find_user(userName)
+            if User.userName == userName and User.password == password:
+                print("Login successful")
+                while True:
+
+                    print(f"Welcome {userName}, use the following code options to proceed")
+                    print("**"*10)
+                    print("1 - save password, 2 - delete password, 3 - display saved passwords, 4 - log out")
 
 
-        # elif code == 2:
-        #     print("Enter your username")
-        #     username = input()
-
-        #     print("Enter your password")
-        #     password = input()
-
-        #     account = find_user(name)
-        #     if account.name == username and account.password == password:
-        #         print("Login successful")
-            
-        #     if 
 
 if __name__ == '__main__':
 
