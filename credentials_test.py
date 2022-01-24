@@ -49,7 +49,7 @@ class TestCredentials(unittest.TestCase):
         self.new_credentials.save_account()
         test_account = Credentials("facebook", "fbkay", "fb321")
         test_account.save_account()
-        account_exists = Credentials.account_exists('twitter')
+        account_exists = Credentials.account_exists('facebook')
         self.assertTrue(account_exists)
 
 
