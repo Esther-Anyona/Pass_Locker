@@ -41,8 +41,15 @@ class TestUser(unittest.TestCase):
         found_user =User.find_by_name("Jodo")
         self.assertEqual(found_user.userName, test_user.userName)
 
+    def test_display_user(self):
+        self.assertEqual(User.display_user(), User.userList)
 
-
+    def test_user_exists(self):
+        self.new_user.save_user()
+        test_user = User ("John", "Doe", "Jodo", "JD123")
+        test_user.save_user()
+        user_exists = User.user_exists('Jodo')
+        self.assertTrue(user_exists)
 
 if __name__ == '__main__':
     unittest.main()
