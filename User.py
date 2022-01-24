@@ -1,10 +1,10 @@
 class User:
-"""
-This is a class for generating new instances of users
-"""
-userList = []
-def _init_(self, firstName, lastName, userName, password):
-    self.firstName = firstName
-    self.lastName = lastName
-    self.userName = userName
-    self.password = password
+    """
+    This is a class for generating new instances of users
+    """
+    userList = []
+    def __init__(self, firstName, lastName, userName, password):
+        self.firstName = firstName
+        self.lastName = lastName
+        self.userName = userName
+        self.password = password
