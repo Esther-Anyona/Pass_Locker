@@ -12,7 +12,7 @@ def save_user(User):
 def delete_user(User):
     User.delete_user
 
-def find_user(number):
+def find_user(name):
     return User.find_by_name()
 
 def display_user():
@@ -35,6 +35,55 @@ def delete_account(Credentials):
 def display_account():
     return Credentials.display_account()
 
+def isexist_account(account):
+    return Credentials.account_exists(account)
 
+
+
+def main():
+    while True:
+        print("Hey, Welcome to Password Locker!")
+        print("Use: 1 - to sign up as a new user, 2 - to login, 3 - to find a user, 4 - to exit")
+
+        code = int(input())
+        if code == 1:
+            print("Create Account")
+            print("*"*10)
+
+            print("Enter your First Name")
+            firstName = input()
+
+            print("Enter your Last Name")
+            lastName = input()
+
+            print("Enter your username")
+            userName = input()
+
+            print("Enter your password")
+            password = input()
+            print("*"*10)
+
+            save_user(create_useraccount(firstName, lastName, userName, password))
+
+            print("Your user account has been successfully created!")
+            print("*"*10)
+
+
+        # elif code == 2:
+        #     print("Enter your username")
+        #     username = input()
+
+        #     print("Enter your password")
+        #     password = input()
+
+        #     account = find_user(name)
+        #     if account.name == username and account.password == password:
+        #         print("Login successful")
+            
+        #     if 
+
+if __name__ == '__main__':
+
+    main()
 
     
