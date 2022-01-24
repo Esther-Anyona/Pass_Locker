@@ -1,10 +1,27 @@
 # Pass Locker
 ## Developed by:
 [Esther-Anyona](https://github.com/Esther-Anyona)
+
+## Table of Contents
+<hr>
+
+1. Description
+1. BDD
+1. Installation Requirements
+1. Cloning
+1. Running the Application
+1. Running unit tests
+1. Bugs
+1. Technologies used
+1. Contacts
+1. Licence
+
+
+
 ### Description
 Pass Locker is a Python terminal-based application for creating and managing user accounts and other credentials for various accounts.
 
-### User Stories
+### BDD
 As a user, I would like to:
 * Create a password locker account with my details, a login username and password.
 * Store existing account credentials in the application.
@@ -16,6 +33,7 @@ As a user, I would like to:
 ### Installation Requirements
 * Python3.8
 * pip
+* pyperclip
 
 ### Cloning
 * Run $ git clone https://github.com/Esther-Anyona/Pass_Locker on your terminal
@@ -27,6 +45,10 @@ In your terminal:
 * $ #!/usr/bin/env python3.8
 * $ chmod +x run.py
 * $ ./run.py
+
+## Running unit tests
+* $ python3.8 user_test.py for the User class
+* $ python3.8 credentials_test.py for the Credentials class
 
 ### Bugs
 No known bugs
@@ -40,5 +62,5 @@ You can reach me through:
 * Phone: +254724374477
 
 ### Licence
-* *MIT License:*
-* Copyright (c) 2022 **Esther Anyona**
+* *MIT Licence:*
+* Copyright (c) [2022] **Esther Anyona**
