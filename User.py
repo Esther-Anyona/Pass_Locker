@@ -9,5 +9,8 @@ class User:
         self.userName = userName
         self.password = password
 
-    def save_user(self):
+    def save_user(self): #saves a user object to userList
         User.userList.append(self)
+
+    def delete_user(self): #deletes a user object
+        User.userList.remove(self)
