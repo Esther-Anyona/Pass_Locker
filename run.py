@@ -51,9 +51,15 @@ def delete_account(Credentials):
     Credentials.delete_account()
 
 def display_account():
+    """
+    Function that returns all saved accounts
+    """
     return Credentials.display_account()
 
 def isexist_account(account):
+    """
+    Function for checking whether an account exists
+    """
     return Credentials.account_exists(account)
 
 def generate_passcode():
@@ -107,9 +113,15 @@ def main():
                     print("username")
                     username = input()
 
-                    print("password")
-                    passcode = input()
-                    print("\n")
+                    print("Enter your password, use the following options;")
+                    print("1 - for own passcode, 2 - for system generated passcode")
+                    option == int(input())
+                    if option == 1:
+                        print("Enter your password")
+                        passcode = input()
+                    elif option == 2:
+                        passcode = generate_passcode()
+                        break
 
                     save_account(create_accountcredentials(account, username, passcode))
 
@@ -142,14 +154,6 @@ def main():
             print("Enter your password")
             password = input()
 
-            # userName = input()
-            # if find_user(userName) == userName and User.password == password:
-            #     print("Login successful")
-            #     while True:
-
-            #         print(f"Welcome {userName}, use the following code options to proceed")
-            #         print("**"*10)
-            #         print("1 - save password, 2 - delete password, 3 - display saved passwords, 4 - log out")
 
 
 
