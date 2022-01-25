@@ -14,7 +14,7 @@
 1. Bugs
 1. Technologies used
 1. Contacts
-1. Licence
+1. License
 
 
 
@@ -61,6 +61,6 @@ You can reach me through:
 * Email: jkemuntoe@gmail.com or
 * Phone: +254724374477
 
-### Licence
-* *MIT Licence:*
+### License
+* *MIT License:*
 * Copyright (c) [2022] **Esther Anyona**
