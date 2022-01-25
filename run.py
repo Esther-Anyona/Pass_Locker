@@ -88,7 +88,7 @@ def main():
                 print(f"Welcome {userName}, use the following code options to proceed")
                 print ("**"*10)
                 print("1 - save new passcode, 2 - Delete passcode, 3 - Display saved passcodes, 4 - log out ")
-
+                print("\n")
                 option = int(input())
                 if option ==1:
                     print("New Credentials")
@@ -135,14 +135,14 @@ def main():
             print("Enter your password")
             password = input()
 
-            User.userName = find_user(userName)
-            if User.userName == userName and User.password == password:
-                print("Login successful")
-                while True:
+            # userName = input()
+            # if find_user(userName) == userName and User.password == password:
+            #     print("Login successful")
+            #     while True:
 
-                    print(f"Welcome {userName}, use the following code options to proceed")
-                    print("**"*10)
-                    print("1 - save password, 2 - delete password, 3 - display saved passwords, 4 - log out")
+            #         print(f"Welcome {userName}, use the following code options to proceed")
+            #         print("**"*10)
+            #         print("1 - save password, 2 - delete password, 3 - display saved passwords, 4 - log out")
 
 
 
