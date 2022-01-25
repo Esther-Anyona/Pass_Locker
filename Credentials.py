@@ -1,3 +1,6 @@
+import random
+import string
+
 class Credentials:
     """
     Credentials class to generate instances of account credentials
@@ -31,3 +34,12 @@ class Credentials:
             if Credentials.account == account:
                 return account
         return False 
+
+    @classmethod
+    def generate_passcode(self):
+    """
+    Method to generate a random passcode of mixed characters and length 10
+    """
+    characters = string.ascii_letters + string.digits + string.punctuation
+    generate_passcode = "".join(random.choice(characters) for i in range(10))
+    return generate_passcode

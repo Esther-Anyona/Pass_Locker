@@ -56,6 +56,13 @@ def display_account():
 def isexist_account(account):
     return Credentials.account_exists(account)
 
+def generate_passcode():
+    """
+    Function for generating a random passcode
+    """
+    generate_passcode = Credentials.generate_passcode()
+    return generate_passcode
+
 
 
 def main():
